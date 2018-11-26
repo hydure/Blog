@@ -169,7 +169,7 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
 [[menu.main]]
   Name = "Archive"
   URL = "/posts/"
-  weight = -5
+  weight = -4
 
 #[[menu.main]]
 #  Name = "This theme on Github"
