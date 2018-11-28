@@ -42,9 +42,9 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
   # New lines can be added with </br> or normal markdown (two spaces at the end of line or two new lines).
   # when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
   
-  sidebarText = """I am a graduate student learning what I can after I get back home
-  from work. </br>Sometimes I study for certifications, other times I attempt a new project or
-  try to solve a CTF challenge. </br>Whatever I do, though, I'll try my best to share
+  sidebarText = """I am a full-time scientist by day, graduate student by night learning what I can about
+  software development and pentesting. </br>Sometimes I study for certifications, other times I attempt a 
+  new project or try to solve a CTF challenge. </br>Whatever I do, though, I'll try my best to share
   it with you."""
 
   # sidebarText = """Here's a [link to google](https://www.google.com)
@@ -86,7 +86,7 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
   author = "Colin Lightfoot"
 
   # This text appears in the site header under website title
-  subtitle = "Showing off how little I do."
+  subtitle = "Showing off the cool things I study."
 
   # Search engine URL
   searchEngineURL = ""
