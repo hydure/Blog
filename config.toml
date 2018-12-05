@@ -114,7 +114,7 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
   defaultDescription = "Colin Lightfoot's technical blog. I'm sure he's up to something..."
 
   # Populate this with your own search keywords - these will appear in the meta tags
-  defaultKeywords = ["Code" , "Pentesting" , "Interesting" , "Other"]
+  defaultKeywords = ["Code" , "Pentesting" , "Interesting" , "Research", "Other"]
 
   # CSS override files
   # Paths should be relative to the `static` directory
