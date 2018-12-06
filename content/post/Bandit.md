@@ -63,7 +63,7 @@ The password to get to the next level is stored in the file `-` located in the h
 
 For example, `-p 2220` is a flag for the SSH commands I used to log into each level. Note that each command's flags are different: `-p` does not always denote the user is entering a port number when used in other commands.
 
-Therefore, we need to precede the hyphen with a `./` to denote that the hyphen is being read as the name for a file in the home directory, denoted as `.` in linux operating systems,  and not as the beginning of a flag for the `cat` command:
+Therefore, we need to precede the hyphen with a `./` to denote that the hyphen is being read as the name for a file in the home directory, denoted as `.` in UNIX operating systems,  and not as the beginning of a flag for the `cat` command:
 
 We type `cat ./-` and receive the password for level 2!
 
