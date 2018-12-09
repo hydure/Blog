@@ -39,7 +39,7 @@ With what we know, I try `sort data.txt | uniq -u` and get the password for leve
 
 Level 9
 
-The password for level 10 is stored in the file `data.txt` and is one of the few human-readable strings beginning with serveral `=` characters. We try `cat`ing the file, but learn that you cannot because the file is not human-readable. The level recommends using the `strings` command, which prints the strings of printable characters in files. With this we can look at the human-readable strings within the file and then search them using `grep`.
+The password for level 10 is stored in the file `data.txt` and is one of the few human-readable strings beginning with several `=` characters. We try `cat`ing the file, but learn that you cannot because the file is not human-readable. The level recommends using the `strings` command, which prints the strings of printable characters in files. With this we can look at the human-readable strings within the file and then search them using `grep`.
 
 Putting it all together, we type `strings data.txt | grep "=="` and get the following output:
 
@@ -72,13 +72,13 @@ Onto level 12!
 
 Level 12:
 
-The password for level 13 is stored in the file `data.txt`, which is a hexdump of a fiel that has been repeatedly compressed. We must create a directory in `/tmp` if we want to store files we decompress, as we are not allowed to in the home directory. This one looks like it's going to be a long one...challenged accepted.
+The password for level 13 is stored in the file `data.txt`, which is a hexdump of a file that has been repeatedly compressed. We must create a directory in `/tmp` if we want to store files we decompress, as we are not allowed to in the home directory. This one looks like it's going to be a long one...challenged accepted.
 
 We start by making a directory in `/tmp` with the command `mkdir /tmp/goo` and copy the `data.txt` file over to it with `cp data.txt /tmp/goo`. We then change to the directory. We need to reverse the hexdump with the `xxd` command the website suggests we use. We see that the `xxd` command can reverse the hexdump by using its `-r` flag.
 
 After typing `xxd -r data.txt > dumped` to output the reversed hexdump into the file `dumped` we then call `file dumped` to assess the file type of `dumped` and see that it holds data compressed by the `gzip` command.
 
-To uncompress a `gzip`-compressed file, the file must first have the `gzip` ending `.gz`. So we change `dumped`'s file name to `dumped.gz` with the command `mv` that simply moves the file to the new name: `mv dumped dumped.gz`. Next we use the `gunzip` command to decompress the file: `gunzip dumped.gz` and receive `dumped`. Then we check `dumped`'s file type and find out that the decompressed file is a compressed bzip2 archive with a block size of 900k.
+To decompress a `gzip`-compressed file, the file must first have the `gzip` ending `.gz`. So we change `dumped`'s file name to `dumped.gz` with the command `mv` that simply moves the file to the new name: `mv dumped dumped.gz`. Next we use the `gunzip` command to decompress the file: `gunzip dumped.gz` and receive `dumped`. Then we check `dumped`'s file type and find out that the decompressed file is a compressed bzip2 archive with a block size of 900k.
 
 We can decompress a `bzip2`-compressed file by calling the `bzip2` command with the decompress `-d` flag. Typing `bzip2 dumped` gives us the file `dumped.out` that is a `gzip`-compressed archive. We change the name again to `dumped.gz` and decompress the file the same way we did before. The file decompresses to `dumped`, a `tar`-compressed archive....argh!
 
@@ -104,7 +104,7 @@ Level 14:
 
 The password for level 15 can be retrieved by submitting the password of the current level to `port 30000` on `localhost`. One of the commands the website recommends is using `nc`, which is used to create arbitrary TCP and UDP connections and listens. Judging from examples of its use online, we can use it to connect to a port and a destination IP address, and we can also type `localhost` to connect to our localhost rather than figuring out its IP address! To submit information, the `nc` command requires the port and destination IP address like so: `nc [destination] [port]`.
 
-Besides the `cat` command that prints teh content of its input to the standard output stream, there is the `echo` command which simply prints the argument you give it to the standard output stream, such as a password string.
+Besides the `cat` command that prints the content of its input to the standard output stream, there is the `echo` command which simply prints the argument you give it to the standard output stream, such as a password string.
 
 Putting this together, we can use this level's password, the `nc` command, and the `echo` command to submit the password to port 30000 on our localhost: `echo <password> | nc -30000 localhost`.
 

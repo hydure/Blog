@@ -69,7 +69,7 @@ We type `cat ./-` and receive the password for level 2!
 
 Level 2:
 
-The password for the next level is stored in a file called `spaces in this filename` located in the home directory. Unforunately, typing the file name verbatim will make the `cat` command believe each word in the file name is its own argument. Typing a space as `\ ` will tell the terminal that you want the space ASCII character to be used so the terminal does not think you are entering another argument.
+The password for the next level is stored in a file called `spaces in this filename` located in the home directory. Unfortunately, typing the file name verbatim will make the `cat` command believe each word in the file name is its own argument. Typing a space as `\ ` will tell the terminal that you want the space ASCII character to be used so the terminal does not think you are entering another argument.
 
 Following what we know above, typing `cat spaces\ in\ this\ filename` allows us to view the password stored in the file. Onto level 3!
 
