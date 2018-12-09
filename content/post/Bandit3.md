@@ -95,7 +95,7 @@ We now understand that we can run the command `cat` as user `bandit20` with the 
 
 Level 20:
 
-There is a setuid binary, `suconnect` in the home directory that first makes a connection to `localhost` on the `port` you specify as a command line argument before reading a line of text from the connection and comparing it to the level 20's password. If the password is correct, then the binary file will provide us the password for level 21. It then hints that we should create our own network daemon and try connecting to it.
+There is a setuid binary, `suconnect`, in the home directory that first makes a connection to `localhost` on the `port` you specify as a command line argument before reading a line of text from the connection and comparing it to the level 20's password. If the password is correct, then the binary file will provide us the password for level 21. It then hints that we should create our own network daemon and try connecting to it.
 
 The website recommends we use the command `nc`, and, after [looking at some of its uses](https://www.computerhope.com/unix/nc.htm), we found that we can create a Netcat daemon that listens `-l` for connections on a certain port `-p` and forwards a message to any clients connecting on said port. After calling `echo "<prevLvlPassword> | nc -l -p 31337` (I hope you find this funny), we then call `suconnect` in the home directory on a separate terminal and use `31337` as the argument for the port we want to listen to, since that is the port our netcat daemon is listening and forwarding a message on. 
 
