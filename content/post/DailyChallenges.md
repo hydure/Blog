@@ -65,9 +65,9 @@ I checked my code with the input provided by the challenge:
 
 And everything worked as intended.
 
-I learned a Python list as a `count(arg)` method that counts how many instances of `arg` there are in the list, which can prove to be useful later on.
+I learned a Python list has a `count(arg)` method that counts how many instances of `arg` there are in the list, which can prove to be useful later on.
 
-Having some more free time, I completed [Challenge #370 UPC Check Digits](https://www.reddit.com/r/dailyprogrammer/comments/a72sdj/20181217_challenge_370_easy_upc_check_digits/) which sadly had no bonus challenge to attempt.
+Having some more free time, I completed [Challenge #370 UPC Check Digits](https://www.reddit.com/r/dailyprogrammer/comments/a72sdj/20181217_challenge_370_easy_upc_check_digits/), which sadly had no bonus challenge to attempt.
 
         def upc(code):
 
