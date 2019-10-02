@@ -198,3 +198,7 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
 [blackfriday]
   hrefTargetBlank = true # open the external links in a new window
   fractions = false
+
+[params.adsense]
+client = "ca-pub-4017802261362613"
+inArticleSlot = "4017802261362613"
