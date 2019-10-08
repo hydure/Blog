@@ -42,9 +42,9 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
   # New lines can be added with </br> or normal markdown (two spaces at the end of line or two new lines).
   # when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
   
-  sidebarText = """I am a Microsoft consultant by day and explorer by night, learning what I can about
+  sidebarText = """I am a Microsoft Consultant by day and explorer by night, learning what I can about
   software development and pentesting. </br>Sometimes I study for certifications, other times I attempt a 
-  new project or try to solve a CTF challenge. </br>Whatever I do, though, I'll try my best to share
+  new project or try to solve a CTF challenge or coding problem. </br>Whatever I do, though, I'll try my best to share
   it with you."""
 
   # sidebarText = """Here's a [link to google](https://www.google.com)
