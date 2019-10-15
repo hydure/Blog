@@ -78,8 +78,11 @@ We can see that the products of the current number build off of the numbers to i
         # Assign the product of the numbers to the left of the current number at the position of the current number in the array.
         # We can do this by storing the previous position's number (1 for the leftmost number), which is the product of all the previous numbers and put that in the current position.
         for i in range(n):
-            prodArr[i] = initialProduct # No need to multiple since every number in prodArray is 1 until we give it initialProduct's current value. 
+            prodArr[i] = initialProduct # No need to multiply since every number in prodArray is 1 until we give it initialProduct's current value. 
             initialProduct *= arr[i]    # Get the product of the numbers to the next number's left
+
+        # Reset our initial product to use it again.
+        initialProduct = 1
 
         # Now we do the same thing, but going right-to-left instead of left-to-right.
         for i in range(n - 1, -1, -1):
