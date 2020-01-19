@@ -42,9 +42,7 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
   # New lines can be added with </br> or normal markdown (two spaces at the end of line or two new lines).
   # when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
   
-  sidebarText = """I am a Microsoft Consultant by day and explorer by night, learning what I can about
-  software development and pentesting. </br>Sometimes I study for certifications, other times I attempt a 
-  new project or try to solve a CTF challenge or coding problem. </br>Whatever I do, though, I'll try my best to share
+  sidebarText = """I am a Microsoft SWE by day and a student by night.</br> I do not have a lot of time for side projects, but whenever I do, though, I'll try my best to share
   it with you."""
 
   # sidebarText = """Here's a [link to google](https://www.google.com)
@@ -86,7 +84,7 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
   author = "Colin Lightfoot"
 
   # This text appears in the site header under website title
-  subtitle = "Showing off the cool things I study."
+  subtitle = "Showing off the cool things I do."
 
   # Search engine URL
   searchEngineURL = ""
@@ -114,7 +112,7 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
   defaultDescription = "Colin Lightfoot's technical blog. I'm sure he's up to something..."
 
   # Populate this with your own search keywords - these will appear in the meta tags
-  defaultKeywords = ["Code" , "Pentesting" , "Interesting" , "Research", "Other"]
+  defaultKeywords = ["Code" , "Pentesting" , "Software Development" , "Research", "Other"]
 
   # CSS override files
   # Paths should be relative to the `static` directory
